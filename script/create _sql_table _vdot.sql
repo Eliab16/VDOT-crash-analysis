@@ -313,6 +313,19 @@ WHERE crash_severity_desc IS NULL;
 SELECT * FROM crash_data
 WHERE k_people IS NULL;
 
+UPDATE crash_data
+SET k_people = COALESCE(k_people,0);
+
+
+UPDATE crash_data
+SET a_people = COALESCE(a_people,0);
+
+UPDATE crash_data
+SET b_people = COALESCE(b_people,0);
+
+UPDATE crash_data
+SET c_people = COALESCE(c_people,0);
+
 
 
 
