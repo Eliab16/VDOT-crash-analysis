@@ -219,6 +219,8 @@ DROP COLUMN	MEDIAN_WIDTHMAX,
 DROP COLUMN	MEDIAN_WIDTHMIN,
 DROP COLUMN	LOAD_DATE;
 
+ALTER TABLE crash_data
+DROP COLUMN crash_severity_desc
 
 ALTER TABLE crash_data
 DROP COLUMN mpo_name,
@@ -278,7 +280,38 @@ UPDATE crash_data SET longitude =
 WHERE longitude IS NULL;
 
 
+SELECT * FROM crash_data
+WHERE document_nbr IS NULL;
 
+
+SELECT * FROM crash_data
+WHERE document_nbr IS NULL;
+
+
+SELECT document_nbr, COUNT(document_nbr) FROM crash_data 
+GROUP BY document_nbr 
+HAVING COUNT(document_nbr)> 1
+
+SELECT * FROM crash_data
+WHERE crash_year IS NULL;
+
+
+UPDATE crash_data
+SET crash_year = COALESCE(crash_year,0)
+
+UPDATE crash_data
+SET crash_day = COALESCE(crash_day,0)
+
+UPDATE crash_data
+SET crash_month = COALESCE(crash_month,0)
+
+
+SELECT * FROM crash_data;
+WHERE crash_severity_desc IS NULL;
+
+
+SELECT * FROM crash_data
+WHERE k_people IS NULL;
 
 
 
