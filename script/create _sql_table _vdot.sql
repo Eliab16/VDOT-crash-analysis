@@ -259,7 +259,23 @@ WHERE NOT(
 (crash_year = 2022 AND crash_month <=7 AND crash_day <=1)));
 
 
+--  cleaning Null values
+select*from crash_data;
 
+SELECT * FROM crash_data
+WHERE latitude IS NULL;
+
+UPDATE crash_data SET latitude = 
+(SELECT AVG(latitude) FROM crash_data WHERE latitude IS NOT NULL) 
+WHERE latitude IS NULL;
+
+
+SELECT * FROM crash_data
+WHERE longitude IS NULL;
+
+UPDATE crash_data SET longitude = 
+(SELECT AVG(longitude) FROM crash_data WHERE longitude IS NOT NULL) 
+WHERE longitude IS NULL;
 
 
 
