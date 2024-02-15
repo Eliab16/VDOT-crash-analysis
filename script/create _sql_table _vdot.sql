@@ -327,10 +327,113 @@ UPDATE crash_data
 SET c_people = COALESCE(c_people,0);
 
 
+UPDATE crash_data
+SET 
+    persons_injured = COALESCE(persons_injured,0),
+    pedestrians_killed = COALESCE(pedestrians_killed,0),
+    pedestrians_injured = COALESCE(pedestrians_injured,0),
+    veh_count = COALESCE(veh_count,0)
 
 
+UPDATE crash_data
+SET 
+    collision_type_desc =COALESCE(collision_type_desc,''),
+    weather_condition_cd =COALESCE(weather_condition_cd ,''),
+    weather_condition_desc =COALESCE(weather_condition_desc ,''),
+    light_condition_desc =COALESCE(light_condition_desc,''),
+    roadway_surface_cond_desc =COALESCE(roadway_surface_cond_desc,''),
+    relation_to_roadway_desc =COALESCE(relation_to_roadway_desc,''),
+    roadway_alignment_desc = COALESCE(roadway_alignment_desc,''),
+    roadway_defect_desc =COALESCE(roadway_defect_desc,''),
+    traffic_control_type_desc =COALESCE(traffic_control_type_desc,''),
+    trfc_ctrl_status_type_desc =COALESCE(trfc_ctrl_status_type_desc,''),
+    work_zone_related_ind = COALESCE (work_zone_related_ind,''),
+    work_zone_location_cd = COALESCE (work_zone_location_cd,''),
+    work_zone_location_desc = COALESCE (work_zone_location_desc,''),
+    work_zone_type_cd= COALESCE (work_zone_type_cd,''),
+--     work_zone_type_des= COALESCE (work_zone_type_des,''),
+    work_zone_type_des= COALESCE (work_zone_type_des,''),
+    school_zone_desc= COALESCE (school_zone_desc,''),
+    first_harmful_event_loc_desc = COALESCE (first_harmful_event_loc_desc,''),
+    alcohol_notalcohol = COALESCE (alcohol_notalcohol,''),
+    animal = COALESCE (animal,''),
+    belted_unbelted = COALESCE (belted_unbelted,''),
+    bike_nonbike= COALESCE (bike_nonbike,''),
+    distracted_notdistracted= COALESCE (distracted_notdistracted,''),
+    drowsy_notdrowsy= COALESCE (drowsy_notdrowsy,''),
+    drug_nodrug= COALESCE (drug_nodrug,''),
+    gr_nogr = COALESCE (gr_nogr,''),
+    hitrun_not_hitrun = COALESCE (hitrun_not_hitrun,''),
+    lgtruck_nonlgtruck = COALESCE (lgtruck_nonlgtruck,''),
+    motor_nonmotor= COALESCE (motor_nonmotor,''),
+    ped_nonped= COALESCE (ped_nonped,''),
+    speed_notspeed= COALESCE (speed_notspeed,''),
+    rd_type= COALESCE (rd_type,''),
+    senior_notsenior = COALESCE (senior_notsenior,''),
+    young_notyoung = COALESCE (young_notyoung,''),
+    mainline_yn =  COALESCE (mainline_yn,''),
+    night =  COALESCE (night,''),
+    juris_desc =COALESCE (juris_desc,''),
+    locality =  COALESCE (locality,''),
+    area_type = COALESCE (area_type,'')
+WHERE  
+     collision_type_desc IS NULL OR
+     weather_condition_cd IS NULL OR
+     weather_condition_desc IS NULL OR
+     light_condition_desc IS NULL OR
+     roadway_surface_cond_desc IS NULL OR
+     relation_to_roadway_desc IS NULL OR
+     roadway_alignment_desc IS NULL OR
+     roadway_defect_desc IS NULL OR
+     traffic_control_type_desc IS NULL OR
+     trfc_ctrl_status_type_desc IS NULL OR
+     work_zone_related_ind IS NULL OR
+     work_zone_location_cd IS NULL OR
+     work_zone_location_desc IS NULL OR
+     work_zone_type_cd IS NULL OR
+--      work_zone_type_des IS NULL OR
+     work_zone_type_des IS NULL OR
+     school_zone_desc IS NULL OR
+     first_harmful_event_loc_desc IS NULL OR
+     alcohol_notalcohol IS NULL OR
+     animal IS NULL OR
+     belted_unbelted IS NULL OR
+     bike_nonbike IS NULL OR
+     distracted_notdistracted IS NULL OR
+     drowsy_notdrowsy IS NULL OR
+     drug_nodrug IS NULL OR
+     gr_nogr IS NULL OR
+     hitrun_not_hitrun IS NULL OR
+     lgtruck_nonlgtruck IS NULL OR
+     motor_nonmotor IS NULL OR
+     ped_nonped IS NULL OR
+    speed_notspeed IS NULL OR
+    rd_type IS NULL OR
+    senior_notsenior IS NULL OR
+    young_notyoung IS NULL OR
+    mainline_yn IS NULL OR
+    night IS NULL OR
+    juris_desc IS NULL OR
+    locality IS NULL OR
+    area_type IS NULL;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-
+  
+  
+  
 
 
 
