@@ -223,9 +223,13 @@ ALTER TABLE crash_data
 DROP COLUMN crash_severity_desc
 
 ALTER TABLE crash_data
-DROP COLUMN mpo_name,
+DROP COLUMN roadway_functional_classification_cd,
+DROP COLUMN roadway_functional_classification_desc,
+DROP COLUMN facility_type_cd;
+
+ALTER TABLE crash_data
+DROP COLUMN 
 DROP COLUMN rte_nm,
-DROP COLUMN rns_mp;
 
 
 -- Extracting month and date from crash_dt column
@@ -294,6 +298,10 @@ HAVING COUNT(document_nbr)> 1
 
 SELECT * FROM crash_data
 WHERE crash_year IS NULL;
+
+UPDATE crash_data
+SET speed_diff_max = COALESCE(speed_diff_max,0)
+
 
 
 UPDATE crash_data
@@ -418,7 +426,8 @@ WHERE
     area_type IS NULL;
   
   
-  
+ UPDATE crash_data
+SET crash_severity = REPLACE(crash_severity, 'U', ''); 
   
   
   
