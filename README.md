@@ -37,10 +37,11 @@ in urban and rural settings and uncovered pattern based on time(seasonality),dem
 crashes and crash severity for the years 2020 to 2022.
 
 ### Examples of analysis charts
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
+![Crash frequency over time](images/image-1.png)
+![Crash severity by age group](images/image-2.png)
+![Crash occerance factors](images/image-3.png)
+![Fatal crash frequency](images/image-4.png)
+
 ## Conclusion
  Here is the link to analysis power point slides 
 
