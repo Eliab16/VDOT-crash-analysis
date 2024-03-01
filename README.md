@@ -1,5 +1,5 @@
 
-# Virginia vehicle crash analysis-(2020-2021) Capstone Project for Partime Data Analytics Cohort #10 program at Nashville Software School.
+# Virginia vehicle crash analysis-(2020-2022) Capstone Project for Partime Data Analytics Cohort #10 program at Nashville Software School.
 
 ## Motivation
 I Live in Northern Virginia, I have personally witnessed the consequences of traffic accidents on individuals and families. The frequent news reports of accidents and the statistics on fatalities and injuries are not mere numbers-they represent real lives and significant public health issue; this has instilled in me a sense of urgency and purpose to address this problem in meaningful way. Furthermore, the availability of comprehensive traffic accident data from the Virginia department of transportation provides an excellent opportunity to conduct in-depth analysis.
